@@ -28,7 +28,7 @@ if [ ! -d $outputdir ]; then
 	mkdir -p $outputdir
 fi
 
-declare -i lines=$(wc -l < $playlist)
+declare -i lines="$(wc -l < $playlist)"
 declare -i songs=($lines-1)/2
 
 for ((song = 1; song <= $songs; song++)); do
